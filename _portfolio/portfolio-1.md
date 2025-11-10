@@ -1,6 +1,6 @@
 ---
 title: "A Dog photo took by my phone"
-excerpt: "一个特别亲人的小狗<br/><img src='/images/a_dog_picture.jpg'>"
+excerpt: "一个特别亲人的小狗<br/><img src='/images/a_dog_picture.png'>"
 collection: portfolio
 ---
 
