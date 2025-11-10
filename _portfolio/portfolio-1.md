@@ -4,4 +4,4 @@ excerpt: "一个特别亲人的小狗<br/><img src='/images/a_dog_picture.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+在2025年11月8日，在门头沟天街旁边的小饭馆拍到一个特别喜欢跟人玩的小狗，扭着屁股就从那个门洞里跑出来了
