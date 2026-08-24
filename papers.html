@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN" data-language="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="魏靖弢的论文成果。">
+  <meta name="theme-color" content="#141414">
+  <meta name="owner-api-base" content="">
+  <link rel="canonical" href="https://wayflower.github.io/papers.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+  <title>Papers — Jingtao Wei</title>
+</head>
+<body>
+  <a class="skip-link" href="#main"><span data-lang="zh">跳到主要内容</span><span data-lang="en">Skip to content</span></a>
+
+  <header class="site-header" id="site-header">
+    <a class="wordmark" href="index.html" aria-label="Wayflower 首页">WAYFLOWER</a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+      <a href="cv.html"><span data-lang="zh">简历</span><span data-lang="en">CV</span></a>
+      <a href="papers.html" aria-current="page"><span data-lang="zh">论文</span><span data-lang="en">Papers</span></a>
+      <a href="showcase.html"><span data-lang="zh">展示</span><span data-lang="en">More</span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English" title="Switch to English">
+        <i data-lucide="languages" aria-hidden="true"></i><span>EN</span>
+      </button>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="切换深色模式" title="切换深色模式">
+        <i data-lucide="moon" aria-hidden="true"></i>
+      </button>
+      <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="mobile-nav" title="打开导航">
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="移动端导航" hidden>
+      <a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a>
+      <a href="cv.html"><span data-lang="zh">简历</span><span data-lang="en">CV</span></a>
+      <a href="papers.html" aria-current="page"><span data-lang="zh">论文</span><span data-lang="en">Papers</span></a>
+      <a href="showcase.html"><span data-lang="zh">展示</span><span data-lang="en">More</span></a>
+    </nav>
+  </header>
+
+  <main id="main" class="interior-page">
+    <section class="page-hero papers-hero paper-library-hero" aria-labelledby="papers-title">
+      <div class="page-shell reveal">
+        <p class="kicker">PUBLICATIONS</p>
+        <h1 id="papers-title"><span data-lang="zh">论文</span><span data-lang="en">PAPERS</span></h1>
+        <p class="page-lede">
+          <span data-lang="zh">正式发表与研究成果将在这里更新。</span>
+          <span data-lang="en">Publications and research outcomes will be updated here.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="paper-library section page-shell" aria-labelledby="paper-library-title">
+      <div class="paper-library-heading reveal">
+        <div>
+          <p class="paper-library-label">PUBLICATIONS</p>
+          <h2 id="paper-library-title"><span data-lang="zh">论文成果</span><span data-lang="en">Publications</span></h2>
+        </div>
+        <button class="button button-outline" id="open-paper-upload" type="button">
+          <i data-lucide="plus" aria-hidden="true"></i>
+          <span data-lang="zh">上传论文</span><span data-lang="en">Add paper</span>
+        </button>
+      </div>
+
+      <div class="paper-list" id="paper-list" aria-live="polite" aria-busy="true">
+        <p class="paper-empty"><span data-lang="zh">正在读取论文列表…</span><span data-lang="en">Loading publications…</span></p>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="paper-dialog" id="paper-upload-dialog" aria-labelledby="paper-dialog-title">
+    <div class="paper-dialog-shell">
+      <button class="dialog-close icon-button" id="close-paper-upload" type="button" aria-label="关闭" title="关闭">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+
+      <div class="paper-dialog-heading">
+        <p>OWNER ACCESS</p>
+        <h2 id="paper-dialog-title"><span data-lang="zh">上传论文</span><span data-lang="en">Add a paper</span></h2>
+        <p><span data-lang="zh">仅 GitHub 账号 @wayflower 可以继续。</span><span data-lang="en">Only the GitHub account @wayflower can continue.</span></p>
+      </div>
+
+      <div class="github-auth-panel" id="github-auth-panel">
+        <div class="github-account">
+          <i data-lucide="github" aria-hidden="true"></i>
+          <div>
+            <strong>@wayflower</strong>
+            <span><span data-lang="zh">GitHub 将返回当前登录账号供本站核验</span><span data-lang="en">GitHub returns the signed-in account for verification</span></span>
+          </div>
+        </div>
+        <button class="button button-primary" id="github-sign-in" type="button">
+          <i data-lucide="github" aria-hidden="true"></i>
+          <span data-lang="zh">使用 GitHub 登录</span><span data-lang="en">Sign in with GitHub</span>
+        </button>
+      </div>
+
+      <form class="paper-entry-form" id="paper-entry-form" hidden>
+        <div class="form-field">
+          <label for="paper-title"><span data-lang="zh">论文名</span><span data-lang="en">Paper title</span></label>
+          <input id="paper-title" name="title" type="text" required>
+        </div>
+        <div class="form-field">
+          <label for="paper-authors"><span data-lang="zh">作者序列</span><span data-lang="en">Author order</span></label>
+          <textarea id="paper-authors" name="authors" rows="2" required></textarea>
+        </div>
+        <div class="form-field">
+          <label for="paper-image"><span data-lang="zh">论文截图</span><span data-lang="en">Paper screenshot</span></label>
+          <input id="paper-image" name="image" type="file" accept="image/png,image/jpeg,image/webp" required>
+        </div>
+        <div class="form-field">
+          <label for="paper-url"><span data-lang="zh">论文地址</span><span data-lang="en">Paper URL</span></label>
+          <input id="paper-url" name="url" type="url" inputmode="url" placeholder="https://" required>
+        </div>
+        <button class="button button-primary" type="submit">
+          <i data-lucide="upload" aria-hidden="true"></i>
+          <span data-lang="zh">提交论文</span><span data-lang="en">Publish paper</span>
+        </button>
+      </form>
+
+      <p class="paper-form-status" id="paper-form-status" aria-live="polite"></p>
+    </div>
+  </dialog>
+
+  <footer class="site-footer page-shell">
+    <p>© <span id="current-year">2026</span> Jingtao Wei</p>
+    <a href="#main"><span data-lang="zh">回到顶部</span><span data-lang="en">Back to top</span><i data-lucide="arrow-up" aria-hidden="true"></i></a>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="script.js"></script>
+  <script src="papers.js"></script>
+</body>
+</html>
