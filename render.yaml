@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: wayflower-content-api
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: main
+    autoDeployTrigger: commit
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OWNER_GITHUB_LOGIN
+        value: wayflower
+      - key: GITHUB_OAUTH_CLIENT_ID
+        sync: false
+      - key: GITHUB_OAUTH_CLIENT_SECRET
+        sync: false
+      - key: GITHUB_OAUTH_CALLBACK_URL
+        sync: false
+      - key: FRONTEND_AUTH_RETURN_URL
+        value: https://wayflower.github.io/papers.html
+      - key: FRONTEND_SHOWCASE_RETURN_URL
+        value: https://wayflower.github.io/showcase.html
+      - key: TOKEN_SECRET
+        generateValue: true
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_OWNER
+        value: wayflower
+      - key: GITHUB_REPO
+        value: wayflower.github.io
+      - key: GITHUB_BRANCH
+        value: main
+      - key: GITHUB_API_VERSION
+        value: 2026-03-10
+      - key: ALLOWED_ORIGINS
+        value: https://wayflower.github.io
+      - key: TRUST_PROXY
+        value: "1"

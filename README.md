@@ -85,6 +85,10 @@ npm start
 
 `backend/Dockerfile` 可部署到支持常驻 Docker/Node 服务的平台。当前 OAuth state、一次性兑换码与限流状态保存在进程内存中，因此部署时使用单实例；需要横向扩容时应先改用 Redis 等共享存储。
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2Fwayflower%2Fwayflower.github.io)
+
+仓库根目录的 `render.yaml` 会创建一个新加坡区域的单实例 Docker Web Service，并配置 `/health` 健康检查。首次部署时，Render 会要求输入 GitHub OAuth Client ID、Client Secret、Callback URL 和仓库专用 Token；`TOKEN_SECRET` 由 Render 自动生成。
+
 后端部署完成后，把 `papers.html` 与 `showcase.html` 中 `owner-api-base` 元标签的 `content` 设置为 HTTPS API 地址，例如：
 
 ```html
