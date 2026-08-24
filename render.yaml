@@ -19,7 +19,7 @@ services:
       - key: GITHUB_OAUTH_CLIENT_SECRET
         sync: false
       - key: GITHUB_OAUTH_CALLBACK_URL
-        sync: false
+        value: https://wayflower-content-api.onrender.com/auth/github/callback
       - key: FRONTEND_AUTH_RETURN_URL
         value: https://wayflower.github.io/papers.html
       - key: FRONTEND_SHOWCASE_RETURN_URL

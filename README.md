@@ -87,7 +87,7 @@ npm start
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2Fwayflower%2Fwayflower.github.io)
 
-仓库根目录的 `render.yaml` 会创建一个新加坡区域的单实例 Docker Web Service，并配置 `/health` 健康检查。首次部署时，Render 会要求输入 GitHub OAuth Client ID、Client Secret、Callback URL 和仓库专用 Token；`TOKEN_SECRET` 由 Render 自动生成。
+仓库根目录的 `render.yaml` 会创建一个新加坡区域的单实例 Docker Web Service，并配置 `/health` 健康检查。首次部署时，Render 会要求输入 GitHub OAuth Client ID、Client Secret 和仓库专用 Token；OAuth Callback URL 固定为 `https://wayflower-content-api.onrender.com/auth/github/callback`，`TOKEN_SECRET` 由 Render 自动生成。
 
 后端部署完成后，把 `papers.html` 与 `showcase.html` 中 `owner-api-base` 元标签的 `content` 设置为 HTTPS API 地址，例如：
 
