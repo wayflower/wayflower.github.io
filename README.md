@@ -92,7 +92,7 @@ npm start
 后端部署完成后，把 `papers.html` 与 `showcase.html` 中 `owner-api-base` 元标签的 `content` 设置为 HTTPS API 地址，例如：
 
 ```html
-<meta name="owner-api-base" content="https://paper-api.example.com">
+<meta name="owner-api-base" content="https://wayflower-content-api.onrender.com">
 ```
 
 OAuth Client Secret、`TOKEN_SECRET` 和 GitHub Token 只能配置在后端平台的私密环境变量中，不能写入 GitHub Pages、提交到仓库或发送给浏览器。
